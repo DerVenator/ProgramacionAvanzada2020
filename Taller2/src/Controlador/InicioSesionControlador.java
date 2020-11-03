@@ -22,6 +22,8 @@ public class InicioSesionControlador implements ActionListener{
     InicioSesionInterfaz isi;
     InicioSesion inicioSesion;
     
+
+    
     public InicioSesionControlador (Usuario usuario, InicioSesion inicioSesion, InicioSesionInterfaz isi){
         this.isi = isi;
         this.usuario = usuario;
@@ -46,9 +48,6 @@ public class InicioSesionControlador implements ActionListener{
                 Logger.getLogger(InicioSesionControlador.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        
     }
-    
-    
     
 }

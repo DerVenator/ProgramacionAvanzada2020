@@ -2,6 +2,7 @@ package Modelo;
 import java.sql.*;
 import Vista.*;
 import Controlador.*;
+import javax.swing.JOptionPane;
 
 public class InicioSesion extends Conexion{
     Connection con = getConexion();
@@ -50,11 +51,15 @@ public class InicioSesion extends Conexion{
                     case "Profesor":
                         ProfesorInterfaz pi = new ProfesorInterfaz();
                         Sala sala = new Sala();
+                        OperacionesSala os = new OperacionesSala();
                         Equipo equipoP = new Equipo();
                         OperacionesEquipo oe= new OperacionesEquipo();
-                        ProfesorControlador pc = new ProfesorControlador(sala, equipoP, oe, pi);
+                        ProfesorControlador pc = new ProfesorControlador(usuario,sala, os, equipoP, oe, pi);
                         pc.iniciar();
                         pi.setVisible(true);
+                        break;
+                    default:
+                        JOptionPane.showMessageDialog(null, "Usuario tiene un rol desconocido, porfavor contacte con el administrador");
                 }
             }
         } catch(SQLException e){

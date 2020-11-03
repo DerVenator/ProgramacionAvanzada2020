@@ -11,7 +11,7 @@ package Modelo;
  */
 public class Sala {
     int idSala;
-    boolean idUsuarioReserva;
+    int idUsuarioReserva;
 
     public int getIdSala() {
         return idSala;
@@ -21,11 +21,12 @@ public class Sala {
         this.idSala = idSala;
     }
 
-    public boolean isIdUsuarioReserva() {
+    public int getIdUsuarioReserva() {
         return idUsuarioReserva;
     }
 
-    public void setIdUsuarioReserva(boolean idUsuarioReserva) {
+    public void setIdUsuarioReserva(int idUsuarioReserva) {
         this.idUsuarioReserva = idUsuarioReserva;
     }
+
 }
